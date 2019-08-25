@@ -71,6 +71,35 @@ html {
   color: #fff;
 }
 
+.header .nav {
+  position: relative;
+}
+
+.header .nav .toggle-btn {
+  display: none;
+  position: fixed;
+  width: 30px;
+  height: 12px;
+  z-index: 2;
+  cursor: pointer;
+  top: 27px;
+}
+
+.header .nav .toggle-btn .one {
+  position: absolute;
+  width: 30px;
+  height: 2px;
+  background: #fff;
+}
+
+.header .nav .toggle-btn .two {
+  position: absolute;
+  width: 30px;
+  height: 2px;
+  background: #fff;
+  margin-top: 12px;
+}
+
 .header .navbar {
   list-style: none;
 }
@@ -140,27 +169,61 @@ html {
 
 @-webkit-keyframes fade {
   from {
-    -webkit-transform: translateY(-15px);
-            transform: translateY(-15px);
     opacity: 0;
   }
   to {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
     opacity: 1;
   }
 }
 
 @keyframes fade {
   from {
-    -webkit-transform: translateY(-15px);
-            transform: translateY(-15px);
     opacity: 0;
   }
   to {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
     opacity: 1;
+  }
+}
+
+@media screen and (max-width: 901px) {
+  .header .nav .toggle-btn {
+    display: block;
+  }
+  .header .navbar {
+    list-style: none;
+    background: #182026;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: -100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    z-index: 1;
+  }
+  .header .navbar a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.6em;
+  }
+  .tagline {
+    left: 50%;
+    text-align: center;
+  }
+  .arrow {
+    left: 50%;
+    text-align: center;
   }
 }
 
@@ -503,5 +566,59 @@ html {
   text-decoration: none;
   font-family: "Dosis", sans-serif;
   font-size: 1.2em;
+}
+
+@media screen and (max-width: 901px) {
+  .history {
+    width: 90%;
+    text-align: center;
+  }
+  .history .grid-2,
+  .history .subgrid-2 {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  .team {
+    width: 90%;
+    text-align: center;
+  }
+  .team .grid-2,
+  .team .subgrid-2 {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    grid-gap: 20px;
+  }
+  .contact {
+    width: 90%;
+    text-align: center;
+  }
+  .contact .grid-2,
+  .contact .subgrid-2 {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  .services .grid-2 {
+    width: 90%;
+    text-align: center;
+  }
+  .services .grid-2,
+  .services .subgrid-2 {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  .newsletter {
+    padding: 20px;
+    text-align: center;
+  }
+  .newsletter .input-txt {
+    width: 90%;
+    margin: auto;
+  }
+  .footer {
+    display: block;
+  }
+  .footer div {
+    margin: 10px 0;
+  }
 }
 /*# sourceMappingURL=main.css.map */

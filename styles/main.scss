@@ -8,17 +8,78 @@ $font-text: "Dosis", sans-serif;
 }
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
-@import './header';
+@import "./header";
 
-@import './history';
+@import "./history";
 
-@import './team';
+@import "./team";
 
-@import './newsletter';
+@import "./newsletter";
 
-@import './contact';
+@import "./contact";
 
-@import './footer';
+@import "./footer";
+
+@media screen and (max-width: 901px) {
+  .history {
+    width: 90%;
+    text-align: center;
+
+    .grid-2,
+    .subgrid-2 {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .team {
+    width: 90%;
+    text-align: center;
+    .grid-2,
+    .subgrid-2 {
+      grid-template-columns: 1fr;
+      grid-gap: 20px;
+    }
+  }
+
+  .contact {
+    width: 90%;
+    text-align: center;
+
+    .grid-2,
+    .subgrid-2 {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .services {
+    .grid-2 {
+      width: 90%;
+      text-align: center;
+    }
+    .grid-2,
+    .subgrid-2 {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .newsletter {
+    padding: 20px;
+    text-align: center;
+
+    .input-txt {
+      width: 90%;
+      margin: auto;
+    }
+  }
+
+  .footer {
+      display: block;
+
+      div {
+          margin: 10px 0;
+      }
+  }
+}

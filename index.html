@@ -9,8 +9,8 @@
     <link rel="stylesheet" href="./styles/main.css" />
 
     <!-- ion-icons -->
-    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
-
+    <script type="module" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.esm.js"></script>
+    
     <!-- fonts -->
     <link
       href="https://fonts.googleapis.com/css?family=Dosis:200|Teko&display=swap"
@@ -22,9 +22,12 @@
 
     <!-- sal js -->
     <script src="./assets/sal.js/dist/sal.js"></script>
+
+    <!-- tweenmax -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
   </head>
   <body>
-      <a id="home"></a>
+    <a id="home"></a>
     <section class="video-container" id="home">
       <video autoplay muted loop id="bgvid">
         <source src="./assets/bg.mp4" type="video/mp4" />
@@ -43,19 +46,32 @@
         </h1>
       </a>
 
-      <ul
-        data-sal="fade"
-        data-sal-delay="500"
-        data-sal-duration="800"
-        data-sal-easing="ease-in-out"
-        class="navbar"
-      >
-        <li><a href="#home">Home</a></li>
-        <li><a href="#history">History</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#team">Our Team</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
+      <div class="nav">
+        <div
+          data-sal="fade"
+          data-sal-delay="500"
+          data-sal-duration="800"
+          data-sal-easing="ease-in-out"
+          class="toggle-btn"
+        >
+          <span class="one"></span>
+          <span class="two"></span>
+        </div>
+
+        <ul
+          data-sal="fade"
+          data-sal-delay="500"
+          data-sal-duration="800"
+          data-sal-easing="ease-in-out"
+          class="navbar"
+        >
+          <li><a href="#home">Home</a></li>
+          <li><a href="#history">History</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#team">Our Team</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
     </header>
 
     <div class="tagline">
