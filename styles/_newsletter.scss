@@ -1,0 +1,56 @@
+.newsletter {
+  height: 400px;
+  width: 100%;
+  background: #182026;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  h2 {
+    font-size: 4em;
+    color: #8c2e26;
+    font-family: $font-title;
+    text-transform: uppercase;
+  }
+
+  .input-txt {
+    width: 500px;
+    padding: 10px;
+    background: none;
+    border: none;
+    border-bottom: 2px solid #592525;
+    color: #fff;
+    font-family: $font-text;
+    font-size: 1.2em;
+    outline: none;
+
+    text-align: center;
+
+    transition: all 0.2s linear;
+
+    &:focus {
+      border-bottom-color: #8c2e26;
+    }
+  }
+
+  .button {
+    margin: 20px 0;
+    padding: 12px 68px;
+    border: 2px solid #fff;
+    color: #fff;
+    font-family: $font-title;
+    font-size: 1.3em;
+    text-transform: uppercase;
+    background: none;
+
+    cursor: pointer;
+
+    transition: all 0.2s linear;
+
+    &:hover {
+      background: #fff;
+      color: #182026;
+    }
+  }
+}

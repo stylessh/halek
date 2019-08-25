@@ -1,0 +1,24 @@
+$font-title: "Teko", sans-serif;
+$font-text: "Dosis", sans-serif;
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+@import './header';
+
+@import './history';
+
+@import './team';
+
+@import './newsletter';
+
+@import './contact';
+
+@import './footer';

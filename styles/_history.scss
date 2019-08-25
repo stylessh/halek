@@ -1,0 +1,99 @@
+.history {
+  width: 60%;
+  margin: 140px auto;
+
+  .grid-2 {
+    display: grid;
+    grid-template-columns: 20% 80%;
+  }
+
+  .no {
+    color: #8c2e26;
+    font-family: $font-title;
+    font-size: 2em;
+  }
+
+  .lead {
+    color: #182026;
+    opacity: 0.8;
+    font-family: $font-text;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-size: 1.2em;
+  }
+
+  h3 {
+    font-size: 2.7em;
+    font-family: $font-title;
+    color: #182026;
+  }
+
+  .text {
+    font-family: $font-text;
+    padding: 10px 0;
+  }
+
+  .btn {
+    text-decoration: none;
+    display: inline-block;
+    border: 2px solid #592525;
+    color: #592525;
+    padding: 12px 68px;
+    font-family: $font-title;
+    text-transform: uppercase;
+    font-size: 1.2em;
+
+    transition: all 0.2s linear;
+
+    &:hover {
+      background: #592525;
+      color: #fff;
+    }
+  }
+}
+
+.services {
+  background: #182026;
+
+  .grid-2 {
+    width: 60%;
+    margin: 0 auto;
+    padding: 140px 0;
+
+    display: grid;
+    grid-template-columns: 20% 80%;
+  }
+
+  .no {
+    color: #8c2e26;
+    font-family: $font-title;
+    font-size: 2em;
+  }
+
+  .lead {
+    color: #fff;
+    opacity: 0.8;
+    font-family: $font-text;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-size: 1.2em;
+    padding: 10px 0;
+  }
+
+  .subgrid-2 {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 1fr 1fr;
+
+    .icon {
+      color: #592525;
+      font-size: 2em;
+    }
+
+    .text {
+      color: #fff;
+      font-family: $font-text;
+      font-size: 1.3em;
+    }
+  }
+}

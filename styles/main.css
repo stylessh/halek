@@ -1,0 +1,507 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+#bgvid {
+  width: 100%;
+  height: 100vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+  vertical-align: top;
+}
+
+.video-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(24, 32, 38, 0.7);
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  width: 100%;
+  padding: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+.header.scrolled {
+  background-color: #182026;
+  padding: 10px;
+}
+
+.header .brand {
+  font-weight: bold;
+  color: #592525;
+  font-size: 1.2em;
+  font-family: "Teko", sans-serif;
+  text-decoration: none;
+}
+
+.header .brand .sup {
+  font-size: 0.6em;
+  color: #182026;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+.header .brand .sup.scrolled {
+  color: #fff;
+}
+
+.header .navbar {
+  list-style: none;
+}
+
+.header .navbar li {
+  display: inline-block;
+  padding: 0 10px;
+}
+
+.header .navbar a {
+  text-decoration: none;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 1.1em;
+  font-family: "Dosis", sans-serif;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+.header .navbar a::after {
+  content: "";
+  margin-top: 5px;
+  width: 100%;
+  height: 2px;
+  background: #8c2e26;
+  display: block;
+  opacity: 0;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+.header .navbar a.active::after {
+  opacity: 1;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+.tagline {
+  font-size: 3em;
+  position: absolute;
+  top: 50%;
+  left: 30%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-family: "Teko", sans-serif;
+}
+
+.tagline h2 {
+  color: #8c2e26;
+}
+
+.tagline p {
+  color: #fff;
+}
+
+.arrow {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-size: 2em;
+  color: #fff;
+  -webkit-animation: fade 1.2s infinite;
+          animation: fade 1.2s infinite;
+}
+
+@-webkit-keyframes fade {
+  from {
+    -webkit-transform: translateY(-15px);
+            transform: translateY(-15px);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    -webkit-transform: translateY(-15px);
+            transform: translateY(-15px);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.history {
+  width: 60%;
+  margin: 140px auto;
+}
+
+.history .grid-2 {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 20% 80%;
+      grid-template-columns: 20% 80%;
+}
+
+.history .no {
+  color: #8c2e26;
+  font-family: "Teko", sans-serif;
+  font-size: 2em;
+}
+
+.history .lead {
+  color: #182026;
+  opacity: 0.8;
+  font-family: "Dosis", sans-serif;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-size: 1.2em;
+}
+
+.history h3 {
+  font-size: 2.7em;
+  font-family: "Teko", sans-serif;
+  color: #182026;
+}
+
+.history .text {
+  font-family: "Dosis", sans-serif;
+  padding: 10px 0;
+}
+
+.history .btn {
+  text-decoration: none;
+  display: inline-block;
+  border: 2px solid #592525;
+  color: #592525;
+  padding: 12px 68px;
+  font-family: "Teko", sans-serif;
+  text-transform: uppercase;
+  font-size: 1.2em;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+.history .btn:hover {
+  background: #592525;
+  color: #fff;
+}
+
+.services {
+  background: #182026;
+}
+
+.services .grid-2 {
+  width: 60%;
+  margin: 0 auto;
+  padding: 140px 0;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 20% 80%;
+      grid-template-columns: 20% 80%;
+}
+
+.services .no {
+  color: #8c2e26;
+  font-family: "Teko", sans-serif;
+  font-size: 2em;
+}
+
+.services .lead {
+  color: #fff;
+  opacity: 0.8;
+  font-family: "Dosis", sans-serif;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-size: 1.2em;
+  padding: 10px 0;
+}
+
+.services .subgrid-2 {
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 20px;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+}
+
+.services .subgrid-2 .icon {
+  color: #592525;
+  font-size: 2em;
+}
+
+.services .subgrid-2 .text {
+  color: #fff;
+  font-family: "Dosis", sans-serif;
+  font-size: 1.3em;
+}
+
+.team {
+  width: 60%;
+  margin: 140px auto;
+}
+
+.team .grid-2 {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 20% 80%;
+      grid-template-columns: 20% 80%;
+}
+
+.team .no {
+  color: #8c2e26;
+  font-family: "Teko", sans-serif;
+  font-size: 2em;
+}
+
+.team .lead {
+  color: #182026;
+  opacity: 0.8;
+  font-family: "Dosis", sans-serif;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-size: 1.2em;
+  padding: 10px 0;
+}
+
+.team .subgrid-2 {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  grid-column-gap: 10px;
+}
+
+.team .subgrid-2 img {
+  width: 300px;
+  height: 250px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  vertical-align: top;
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+}
+
+.team .subgrid-2 h3 {
+  font-family: "Teko", sans-serif;
+  font-size: 1.5em;
+  color: #592525;
+  padding: 10px 0;
+}
+
+.team .subgrid-2 span {
+  font-family: "Dosis", sans-serif;
+  padding: 5px 0;
+  text-transform: uppercase;
+}
+
+.newsletter {
+  height: 400px;
+  width: 100%;
+  background: #182026;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.newsletter h2 {
+  font-size: 4em;
+  color: #8c2e26;
+  font-family: "Teko", sans-serif;
+  text-transform: uppercase;
+}
+
+.newsletter .input-txt {
+  width: 500px;
+  padding: 10px;
+  background: none;
+  border: none;
+  border-bottom: 2px solid #592525;
+  color: #fff;
+  font-family: "Dosis", sans-serif;
+  font-size: 1.2em;
+  outline: none;
+  text-align: center;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+.newsletter .input-txt:focus {
+  border-bottom-color: #8c2e26;
+}
+
+.newsletter .button {
+  margin: 20px 0;
+  padding: 12px 68px;
+  border: 2px solid #fff;
+  color: #fff;
+  font-family: "Teko", sans-serif;
+  font-size: 1.3em;
+  text-transform: uppercase;
+  background: none;
+  cursor: pointer;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+.newsletter .button:hover {
+  background: #fff;
+  color: #182026;
+}
+
+.contact {
+  width: 60%;
+  margin: 140px auto;
+}
+
+.contact .grid-2 {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 20% 80%;
+      grid-template-columns: 20% 80%;
+}
+
+.contact .no {
+  color: #8c2e26;
+  font-family: "Teko", sans-serif;
+  font-size: 2em;
+}
+
+.contact .lead {
+  color: #182026;
+  opacity: 0.8;
+  font-family: "Dosis", sans-serif;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-size: 1.2em;
+  padding: 10px 0;
+}
+
+.contact h3 {
+  font-size: 3em;
+  color: #182026;
+  font-family: "Teko", sans-serif;
+}
+
+.contact .text {
+  font-family: "Dosis", sans-serif;
+  padding: 20px 0;
+}
+
+.contact input,
+.contact textarea {
+  display: block;
+  width: 100%;
+  padding: 15px 10px;
+  border: none;
+  border-bottom: 2px solid #182026;
+  outline: none;
+  color: #8c2e26;
+  font-family: "Teko", sans-serif;
+  font-size: 1.2em;
+  margin: 10px 0;
+}
+
+.contact .button {
+  margin: 20px 0;
+  padding: 12px 68px;
+  border: 2px solid #592525;
+  color: #592525;
+  font-family: "Teko", sans-serif;
+  background: none;
+  font-size: 1.3em;
+  text-transform: uppercase;
+  cursor: pointer;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+.contact .button:hover {
+  background: #592525;
+  color: #fff;
+}
+
+.footer {
+  background: #182026;
+  padding: 140px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  text-align: center;
+}
+
+.footer .lead {
+  color: #fff;
+  opacity: 0.8;
+  font-family: "Dosis", sans-serif;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-size: 1.2em;
+  padding: 10px 0;
+}
+
+.footer .text {
+  font-family: "Dosis", sans-serif;
+  color: #8c2e26;
+  font-size: 1.2em;
+}
+
+.footer .media .icon {
+  color: #592525;
+  font-size: 1.5em;
+  padding: 0 5px;
+  cursor: pointer;
+}
+
+.footer .mail {
+  color: #8c2e26;
+  text-decoration: none;
+  font-family: "Dosis", sans-serif;
+  font-size: 1.2em;
+}
+/*# sourceMappingURL=main.css.map */
